@@ -33,7 +33,21 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        <li class="nav-item">
+                            <b><a class="nav-link" href="{{ route('order_keke') }}">{{ __('Order Keke') }}</a></b>
+                        </li>
+                        <li class="nav-item">
+                            <b><a class="nav-link" href="{{ route('order_food') }}">{{ __('Order Food') }}</a></b>
+                        </li>
+                        <li class="nav-item">
+                            <b><a class="nav-link" href="{{ route('login') }}">{{ __('My Orders') }}</a></b>
+                        </li>
+                        <li class="nav-item">
+                            <b><a class="nav-link" href="{{ route('login') }}">{{ __('Placed Keke Orders') }}</a></b>
+                        </li>
+                        <li class="nav-item">
+                            <b><a class="nav-link" href="{{ route('login') }}">{{ __('Placed Food Orders') }}</a></b>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -13,4 +13,9 @@ class KekeOrder extends Model
         'user_id', 'location', 'keke_user',
     ];
 
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'keke_user', 'id');
+    }
+
 }

@@ -12,4 +12,9 @@ class FoodOrder extends Model
     protected $fillable = [
         'user_id', 'location', 'food_type', 'qty', 'restaurant_user_id'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'restaurant_user_id', 'id');
+    }
 }

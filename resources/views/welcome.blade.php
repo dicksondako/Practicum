@@ -134,7 +134,7 @@
 				<div class="row justify-content-center">
 					<div class="col-xxl-5 col-xl-6 col-lg-7">
 						<div class="section-title text-center mb-30">
-							<h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Awesome Features</h1>
+							<h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Welcome</h1>
 							<p class="wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor samet consetetur sadipscing elitr, serewd diam nonumy eirmod tempor invidunt ut labore.</p>
 						</div>
 					</div>

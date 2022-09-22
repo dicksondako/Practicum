@@ -14,6 +14,8 @@
                         <thead>
                           <tr>
                             <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
                             <th scope="col">Location</th>
                           </tr>
                         </thead>
@@ -21,6 +23,8 @@
                         @forelse ($keke_orders as $keke_order)
                           <tr>
                             <td>{{ $loop->iteration }}</td>
+                            <td>{{ $keke_order->user->name }}</td>
+                            <td>{{ $keke_order->user->user_description }}</td>
                             <td>{{ $keke_order->location }}</td>
                           </tr>
                         @empty
@@ -40,6 +44,8 @@
                         <thead>
                           <tr>
                             <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
                             <th scope="col">Location</th>
                             <th scope="col">Food Type</th>
                             <th scope="col">Quantity</th>
@@ -49,6 +55,8 @@
                         @forelse ($food_orders as $food_order)
                           <tr>
                             <td>{{ $loop->iteration }}</td>
+                            <td>{{ $food_order->user->name }}</td>
+                            <td>{{ $food_order->user->user_description }}</td>
                             <td>{{ $food_order->location }}</td>
                             <td>{{ $food_order->food_type }}</td>
                             <td>{{ $food_order->qty }}</td>

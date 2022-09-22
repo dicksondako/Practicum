@@ -32,7 +32,7 @@
                             <td>{{ $keke_user->phone_no }}</td>
                             <td>{{ $keke_user->user_description }}</td>
                             <td>{{ $keke_user->email }}</td>
-                            <td><button type="button" class="btn btn-primary"><a href="#" class="text-white" style="text-decoration: none">Order</a></button></td>
+                            <td><button type="button" class="btn btn-primary"><a class="text-white" style="text-decoration: none" href="{{ url('/keke/') }}/{{$keke_user->id}}/create" class="btn btn-default">Order Keke</a></button></td>
 
                           </tr>
                         @empty

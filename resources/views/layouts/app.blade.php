@@ -33,21 +33,29 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <b><a class="nav-link" href="{{ route('order_keke') }}">{{ __('Order Keke') }}</a></b>
-                        </li>
-                        <li class="nav-item">
-                            <b><a class="nav-link" href="{{ route('order_food') }}">{{ __('Order Food') }}</a></b>
-                        </li>
-                        <li class="nav-item">
-                            <b><a class="nav-link" href="{{ route('login') }}">{{ __('My Orders') }}</a></b>
-                        </li>
-                        <li class="nav-item">
-                            <b><a class="nav-link" href="{{ route('login') }}">{{ __('Placed Keke Orders') }}</a></b>
-                        </li>
-                        <li class="nav-item">
-                            <b><a class="nav-link" href="{{ route('login') }}">{{ __('Placed Food Orders') }}</a></b>
-                        </li>
+                        @if(auth()->check() == 'true')
+                            @if(auth()->user()->user_type == 1)
+                            <li class="nav-item">
+                                <b><a class="nav-link" href="{{ route('kekes.index') }}">{{ __('Order Keke') }}</a></b>
+                            </li>
+                            <li class="nav-item">
+                                <b><a class="nav-link" href="{{ route('foods.index') }}">{{ __('Order Food') }}</a></b>
+                            </li>
+                            <li class="nav-item">
+                                <b><a class="nav-link" href="{{ route('my-order') }}">{{ __('My Orders') }}</a></b>
+                            </li>
+                            @endif
+                            @if(auth()->user()->user_type == 2)
+                            <li class="nav-item">
+                                <b><a class="nav-link" href="{{ route('login') }}">{{ __('Placed Keke Orders') }}</a></b>
+                            </li>
+                            @endif
+                            @if(auth()->user()->user_type == 3)
+                            <li class="nav-item">
+                                <b><a class="nav-link" href="{{ route('login') }}">{{ __('Placed Food Orders') }}</a></b>
+                            </li>
+                            @endif
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->

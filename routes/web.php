@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\FoodController;
 use App\Http\Controllers\FoodOrderController;
+use App\Http\Controllers\KekeController;
 use App\Http\Controllers\KekeOrderController;
+use App\Http\Controllers\MyOrdersController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -24,7 +27,27 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/order_keke', [KekeOrderController::class, 'index'])->name('order_keke');
+//Route::get('keke/', [KekeOrderController::class, 'index'])->name('keke.index');
 
-Route::get('/order_food', [FoodOrderController::class, 'index'])->name('order_food');
+//Route::get('food/', [FoodOrderController::class, 'index'])->name('food.index');
+
+Route::get('foods/', [FoodController::class, 'index'])->name('foods.index');
+
+Route::get('kekes/', [KekeController::class, 'index'])->name('kekes.index');
+
+
+
+
+//Route::put('/edit', [KekeController::class, 'update'])->name('kekeUpdate');
+
+Route::get('/kekes/{id}/create', [KekeController::class, 'create'])->name('kekes.{id}.create');
+
+Route::post('/keke/create', [KekeController::class, 'store'])->name('keke.store');
+
+Route::get('/foods/{id}/create', [FoodController::class, 'create'])->name('foods.{id}.create');
+
+Route::post('/food/create', [FoodController::class, 'store'])->name('food.store');
+
+Route::get('my-order/', [MyOrdersController::class, 'index'])->name('my-order');
+
 
